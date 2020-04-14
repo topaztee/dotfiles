@@ -1,4 +1,5 @@
 [alias]
+	sneak = commit --amend --no-edit
 	co = checkout
 	cob = checkout -b
 	coo = !git fetch && git checkout
@@ -20,9 +21,12 @@
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 	f = "!git ls-files | grep -i"
 	gr = grep -Ii
+	difffiles = diff --name-only master
 	la = "!git config -l | grep alias | cut -c 7-"
 [user]
 	name = topaztee
 	email = topaztee@gmail.com
 [core]
 	excludesfile = /Users/topaztee/.gitignore_global
+[merge]
+	ff = only
